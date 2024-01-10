@@ -1,0 +1,59 @@
+acumulador = 0
+print('~~~~~~~~~~ Bem-vindo a pizzaria da Ana Luíza!~~~~~~~~~~~~~~~~')
+
+
+print('-----------------------CARDÁPIO--------------------------')
+print('| Código |  Descrição   |  Pizza média  |  Pizza grande | ')
+print('|   21   |  Napolitana  |   R$ 20, 00   |    R$ 26,00   | ')
+print('|   22   |  Margherita  |   R$ 20, 00   |    R$ 26,00   | ')
+print('|   23   |  Calabresa   |   R$ 25, 00   |    R$ 32,50   | ')
+print('|   24   |   Toscana    |   R$ 30, 00   |    R$ 39,00   | ')
+print('|   25   |  Portuguesa  |   R$ 30, 00   |    R$ 39,00   | ')
+print('----------------------------------------------------------')
+
+while True:
+
+        tamanho = input('Qual o tamanho da pizza que você deseja (M/G):')
+        codigo = int(input('Entre com o código do sabor desejado:'))
+
+        if tamanho == 'M' and codigo == 21:
+                acumulador = acumulador + 20.00
+                print('Você escolheu a pizza sabor Napolitana!')
+        elif tamanho == 'M' and codigo == 22:
+                acumulador = acumulador + 20.00
+                print('Você escolheu a pizza sabor Margherita!')
+        elif tamanho == 'M' and codigo == 23:
+                acumulador = acumulador + 25.00
+                print('Você escolheu a pizza sabor Calabresa!')
+        elif tamanho == 'M' and codigo == 24:
+                acumulador = acumulador + 30.00
+                print('Você escolheu a pizza sabor Toscana!')
+        elif tamanho== 'M' and codigo ==  25:
+                acumulador = acumulador + 30.00
+                print('Você escolheu a pizza sabor Portuguesa!')
+        elif tamanho == 'G' and codigo == 21:
+                acumulador = acumulador + 26.00
+                print('Você escolheu a pizza sabor Napolitana tamanho G!')
+        elif tamanho == 'G' and codigo == 22:
+                acumulador = acumulador + 26.00
+                print('Você escolheu a pizza sabor Margherita tamanho G!')
+        elif tamanho == 'G' and codigo == 23:
+                acumulador = acumulador + 32.50
+                print('Você escolheu a pizza sabor Calabresa tamanho G!')
+        elif tamanho == 'G' and codigo == 24 :
+                acumulador = acumulador + 39.00
+                print('Você escolheu a pizza sabor Toscana tamanho G!')
+        elif tamanho == 'G' and codigo == 25:
+                acumulador = acumulador + 39.00
+                print('Você escolheu a pizza sabor Portuguesa tamanho G!')
+        else:
+                print('Comando inválido')
+                continue
+        pedido2 = input('Deseja mais alguma serviço? Digite 1 se sim e 0 se não.')
+        if pedido2 == '1':
+                continue
+        else:
+                print('O total a ser pago é: {}. Obrigada e bom apetite!'.format(acumulador))
+        break
+
+
